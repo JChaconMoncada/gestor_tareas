@@ -58,7 +58,7 @@ def menu():
             fecha = input("Fecha límite (DD/MM/AAAA): ")
             tareas = agregar_tarea(tareas, titulo, desc, fecha)
             guardar_tareas(tareas)
-            print("✅ Tarea agregada con éxito.")
+            print("Tarea agregada con éxito.")
             
         elif opcion == '2':
             pendientes = listar_pendientes(tareas)
@@ -72,9 +72,9 @@ def menu():
             id_tarea = input("Ingresa el ID de la tarea a completar: ")
             if completar_tarea(tareas, id_tarea):
                 guardar_tareas(tareas)
-                print("✅ Tarea marcada como completada.")
+                print("Tarea marcada como completada.")
             else:
-                print("❌ Tarea no encontrada.")
+                print("Tarea no encontrada.")
                 
         elif opcion == '4':
             print("¡Hasta luego!")
