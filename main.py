@@ -45,11 +45,11 @@ def menu():
     tareas = cargar_tareas()
     
     while True:
-        print("\n--- GESTOR DE TAREAS ---")
+        print("\n--- GESTOR DE TAREAS ---/n")
         print("1. Agregar nueva tarea")
         print("2. Ver tareas pendientes")
         print("3. Marcar tarea como completada")
-        print("4. Salir")
+        print("4. Salir/n")
         opcion = input("Elige una opción: ")
 
         if opcion == '1':
