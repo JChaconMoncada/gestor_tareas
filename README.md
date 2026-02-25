@@ -36,6 +36,10 @@ Una aplicación de línea de comandos (CLI) construida en Python para gestionar 
 
 **Solución**: Se separó la lógica pura de manipulación de listas (agregar_tarea, completar_tarea) de la lógica de escritura de archivos (guardar_tareas). Así, test_main.py solo evalúa las listas en la memoria RAM sin tocar el disco duro.
 
+**Problema**: Al cerrar y volver a abrir la terminal (o al ejecutar el programa desde una carpeta diferente), el programa no leía las tareas guardadas previamente, sino que creaba un archivo `tareas.json` nuevo y vacío. Esto se debía a un conflicto con las rutas relativas.
+
+**Solución**: Se actualizó el código para utilizar rutas absolutas dinámicas mediante `os.path.dirname(os.path.abspath(__file__))`. Esto obliga al programa a buscar y guardar el archivo `tareas.json` exactamente en el mismo directorio donde reside el script `main.py`, asegurando que el historial de tareas se cargue correctamente sin importar desde dónde se abra la consola.
+
 ## Diagramas del Sistema
 
 ### Diagrama de Flujo
