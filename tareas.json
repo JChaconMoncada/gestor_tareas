@@ -1,0 +1,16 @@
+[
+    {
+        "id": "0c59365b",
+        "titulo": "Carrera",
+        "descripcion": "Debo correr al cerro",
+        "fecha": "26/02/2026",
+        "estado": "pendiente"
+    },
+    {
+        "id": "f47bf94d",
+        "titulo": "Tareas",
+        "descripcion": "Debo terminar las Tareas",
+        "fecha": "28/02/2026",
+        "estado": "pendiente"
+    }
+]
