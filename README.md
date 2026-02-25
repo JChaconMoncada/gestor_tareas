@@ -10,13 +10,10 @@ Una aplicación de línea de comandos (CLI) construida en Python para gestionar 
 
 ## Requisitos Técnicos Cumplidos:
 
-[x] Uso de Git (Mínimo 5 commits).
-
-[x] 2 Diagramas (Arquitectura y Flujo).
-
-[x] Uso del depurador (VS Code Debugger aplicado en la inserción y modificación de datos).
-
-[x] 3 pruebas unitarias usando unittest (test_main.py).
+- [x] Uso de Git (Mínimo 5 commits).
+- [x] 2 Diagramas (Arquitectura y Flujo).
+- [x] Uso del depurador (VS Code Debugger aplicado en la inserción y modificación de datos).
+- [x] 3 pruebas unitarias usando unittest (test_main.py).
 
 ## Manual de Usuario Básico:
 
@@ -24,11 +21,10 @@ Una aplicación de línea de comandos (CLI) construida en Python para gestionar 
 
 **Ejecución**: Escribe python main.py en tu consola.
 
-**Uso**: - El sistema mostrará un menú numérico del 1 al 4.
-
-Escribe el número de la acción que deseas realizar y presiona Enter.
-
-Para completar una tarea (Opción 3), primero usa la Opción 2 para ver tus tareas pendientes y copia el ID (el código de 8 letras/números entre corchetes, ej: [a1b2c3d4]). Pega ese ID cuando el sistema te lo pida.
+**Uso**: 
+- El sistema mostrará un menú numérico del 1 al 4.
+- Escribe el número de la acción que deseas realizar y presiona Enter.
+- Para completar una tarea (Opción 3), primero usa la Opción 2 para ver tus tareas pendientes y copia el ID (el código de 8 letras/números entre corchetes, ej: [a1b2c3d4]). Pega ese ID cuando el sistema te lo pida.
 
 ## Problemas Encontrados y Soluciones:
 
@@ -42,17 +38,17 @@ Para completar una tarea (Opción 3), primero usa la Opción 2 para ver tus tare
 
 ## Diagramas del Sistema
 
-### Diagrama de Arquitectura
-```mermaid
-graph LR
-    A[Usuario Consola] <--> B(main.py)
-    B <--> C[(tareas.json)]
-
-### Diagrama de Flujo (Agregar Tarea)
-
+### Diagrama de Flujo
 graph TD
     A[Inicio] --> B[Ingresar Datos]
     B --> C{Generar ID Único}
     C --> D[Guardar en JSON]
     D --> E[Mostrar Éxito]
     E --> F[Fin]
+
+### Diagrama de Arquitectura
+
+```mermaid
+graph LR
+    A[Usuario Consola] <--> B(main.py)
+    B <--> C[(tareas.json)]
